@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Categories - Category - philipjani.com</title>
+        <link>https://philipjani.github.io/categories/</link>
+        <description>Categories - Category - philipjani.com</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>philipjani@yahoo.com (Philip Jani)</managingEditor>
+            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Sat, 13 Aug 2022 02:53:33 -0400</lastBuildDate><atom:link href="https://philipjani.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>scrum</title>
+    <link>https://philipjani.github.io/categories/scrum/</link>
+    <pubDate>Sat, 13 Aug 2022 02:53:33 -0400</pubDate>
+    <author>Philip Jani</author>
+    <guid>https://philipjani.github.io/categories/scrum/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

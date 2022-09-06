@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>scrum - Tag - philipjani.com</title>
+        <link>https://philipjani.github.io/tags/scrum/</link>
+        <description>scrum - Tag - philipjani.com</description>
+        <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>philipjani@yahoo.com (Philip Jani)</managingEditor>
+            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Sat, 13 Aug 2022 02:53:33 -0400</lastBuildDate><atom:link href="https://philipjani.github.io/tags/scrum/" rel="self" type="application/rss+xml" /><item>
+    <title>Test</title>
+    <link>https://philipjani.github.io/posts/test/</link>
+    <pubDate>Sat, 13 Aug 2022 02:53:33 -0400</pubDate>
+    <author>Philip Jani</author>
+    <guid>https://philipjani.github.io/posts/test/</guid>
+    <description><![CDATA[Option Description data path to data files to supply the data that will be passed into templates. engine engine to be used for processing templates. Handlebars is the default. ext extension to be used for dest files. 3 Content Summaries LoveIt theme uses the summary of the content to display abstract information in the home page. Hugo can generate summaries of your content.
+How to create a script to update an existing Git repository By default, Hugo automatically takes the first 70 words of your content as its summary.]]></description>
+</item>
+</channel>
+</rss>
