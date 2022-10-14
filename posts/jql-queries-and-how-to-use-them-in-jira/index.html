@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>JQL Queries and How to Use Them in Jira - philipjani.com</title><meta name="Description" content="philipjani.com"><meta property="og:title" content="JQL Queries and How to Use Them in Jira" />
+<meta property="og:description" content="Why Do Scrum Masters Need to Know JQL? Within a real world Jira project, there could easily be thousands, if not tens of thousands of individual issues across hundreds of projects and boards that need to be tracked across a variety of inflight statuses. Jira Queries can also be saved as JQL filters and used to create dashboards that create added transparency for team members, senior leadership or stakeholders.
+In order to make this task of tracking issues easier, Jira has a built in search mechanism called &ldquo;JQL&rdquo; which stands for Jira Query Langauge and in many ways it is similar to SQL (Structured Query Langauge)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/" /><meta property="og:image" content="https://philipjani.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-30T09:51:54-04:00" />
+<meta property="article:modified_time" content="2022-09-30T09:51:54-04:00" /><meta property="og:site_name" content="philipjani.com" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://philipjani.github.io/logo.png"/>
+
+<meta name="twitter:title" content="JQL Queries and How to Use Them in Jira"/>
+<meta name="twitter:description" content="Why Do Scrum Masters Need to Know JQL? Within a real world Jira project, there could easily be thousands, if not tens of thousands of individual issues across hundreds of projects and boards that need to be tracked across a variety of inflight statuses. Jira Queries can also be saved as JQL filters and used to create dashboards that create added transparency for team members, senior leadership or stakeholders.
+In order to make this task of tracking issues easier, Jira has a built in search mechanism called &ldquo;JQL&rdquo; which stands for Jira Query Langauge and in many ways it is similar to SQL (Structured Query Langauge)."/>
+<meta name="application-name" content="philipjani.com">
+<meta name="apple-mobile-web-app-title" content="philipjani.com"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="icon" href="/favicon-32x32.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "JQL Queries and How to Use Them in Jira",
+        "inLanguage": "en-us",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/philipjani.github.io\/posts\/jql-queries-and-how-to-use-them-in-jira\/"
+        },"genre": "posts","keywords": "scrum, jql, jira","wordcount":  694 ,
+        "url": "https:\/\/philipjani.github.io\/posts\/jql-queries-and-how-to-use-them-in-jira\/","datePublished": "2022-09-30T09:51:54-04:00","dateModified": "2022-09-30T09:51:54-04:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Philip Jani"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="philipjani.com">philipjani.com</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="philipjani.com">philipjani.com</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">JQL Queries and How to Use Them in Jira</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://www.linkedin.com/in/philip-jani/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Philip Jani</a></span>&nbsp;<span class="post-category">included in <a href="/categories/scrum/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>scrum</a>&nbsp;<a href="/categories/jql/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>jql</a>&nbsp;<a href="/categories/jira/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>jira</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-30">2022-09-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;694 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#aawhy-do-scrum-masters-need-to-know-jql"><!-- raw HTML omitted --><!-- raw HTML omitted -->Why Do Scrum Masters Need to Know JQL?</a></li>
+    <li><a href="#aawhat-is-jql"><!-- raw HTML omitted --><!-- raw HTML omitted -->What is JQL?</a></li>
+    <li><a href="#aahow-to-use-jql-within-jira"><!-- raw HTML omitted --><!-- raw HTML omitted -->How to use JQL within Jira</a></li>
+    <li><a href="#aalogical-operators"><!-- raw HTML omitted --><!-- raw HTML omitted -->Logical Operators</a></li>
+    <li><a href="#aajql-examples"><!-- raw HTML omitted --><!-- raw HTML omitted -->JQL Examples:</a>
+      <ul>
+        <li><a href="#aafinding-child-issues-stories-defects-of-an-epic"><!-- raw HTML omitted --><!-- raw HTML omitted -->Finding Child Issues (Stories, Defects) of an Epic:</a></li>
+        <li><a href="#aasearch-for-issues-without-fix-versions"><!-- raw HTML omitted --><!-- raw HTML omitted -->Search for Issues without Fix Versions:</a></li>
+        <li><a href="#aasearch-issues-from-a-specific-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted -->Search Issues from a Specific Sprint:</a></li>
+        <li><a href="#aaaccepted-issues-in-the-past-3-months-with-no-fix-versions"><!-- raw HTML omitted --><!-- raw HTML omitted -->Accepted Issues in the Past 3 months with no Fix Versions</a></li>
+        <li><a href="#aa-all-issues-in-currently-active-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted --> All Issues in Currently Active Sprint</a></li>
+        <li><a href="#aadefects-created-today"><!-- raw HTML omitted --><!-- raw HTML omitted -->Defects Created Today</a></li>
+        <li><a href="#aaissues-without-fix-versions-in-current-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted -->Issues without Fix Versions in Current Sprint</a></li>
+        <li><a href="#aaaccepted-issues"><!-- raw HTML omitted --><!-- raw HTML omitted -->Accepted Issues</a></li>
+        <li><a href="#aablocked-issues"><!-- raw HTML omitted --><!-- raw HTML omitted -->Blocked Issues</a></li>
+        <li><a href="#aaclosed-issues-past-7-days"><!-- raw HTML omitted --><!-- raw HTML omitted -->Closed Issues (past 7 days)</a></li>
+        <li><a href="#aadefects-in-current-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted -->Defects in Current Sprint</a></li>
+        <li><a href="#aaepics"><!-- raw HTML omitted --><!-- raw HTML omitted -->Epics</a></li>
+        <li><a href="#aaopen-issues"><!-- raw HTML omitted --><!-- raw HTML omitted -->Open Issues</a></li>
+      </ul>
+    </li>
+    <li><a href="#aasaving-jql-queries-as-jql-filters"><!-- raw HTML omitted --><!-- raw HTML omitted -->Saving JQL Queries as JQL Filters</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="aawhy-do-scrum-masters-need-to-know-jql"><!-- raw HTML omitted --><!-- raw HTML omitted -->Why Do Scrum Masters Need to Know JQL?</h2>
+<p>Within a real world Jira project, there could easily be thousands, if not tens of thousands of individual issues across hundreds of projects and boards that need to be tracked across a variety of inflight statuses. Jira Queries can also be saved as JQL filters and used to create dashboards that create added transparency for team members, senior leadership or stakeholders.</p>
+<p>In order to make this task of tracking issues easier, Jira has a built in search mechanism called &ldquo;JQL&rdquo; which stands for Jira Query Langauge and in many ways it is similar to SQL (Structured Query Langauge).</p>
+<h2 id="aawhat-is-jql"><!-- raw HTML omitted --><!-- raw HTML omitted -->What is JQL?</h2>
+<p>JQL is a way to search for any issue in Jira by it&rsquo;s particular details. Examples include searching for an issue based on it&rsquo;s particular title (or summary as it is referred to in Jira), by the Epic it is associated to, what team is working on it or what sprint it was worked on. Any detail that is tracked within the issue can be used to perform a JQL search and return that issue or a host of related issues.</p>
+<h2 id="aahow-to-use-jql-within-jira"><!-- raw HTML omitted --><!-- raw HTML omitted -->How to use JQL within Jira</h2>
+<p>At the top of a Jira Software instance, you will see a blue banner that says, &ldquo;Dashboards&rdquo;, &ldquo;Projects&rdquo;, &ldquo;Issues&rdquo;, &ldquo;Boards&rdquo;, &ldquo;Plans&rdquo;, etc. In order to access the JQL search bar, you will need to click on &ldquo;Issues&rdquo; which will bring down a drop down menu with many different options. What you want to click on is, &ldquo;Search for issues&rdquo; within this dropdown menu. This will bring out the &ldquo;Search&rdquo; bar and this is where you will want to input your JQL query.</p>
+<h2 id="aalogical-operators"><!-- raw HTML omitted --><!-- raw HTML omitted -->Logical Operators</h2>
+<p>Similar to SQL queries, JQL uses logical operators to create more complex queries and data filters with additional logic. The most common ones would be &ldquo;AND&rdquo;, &ldquo;OR&rdquo; and &ldquo;NOT&rdquo;.</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>To Find All &#39;Open&#39; Issues:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Team = 544 AND Sprint in openSprints() AND status not in (Blocked, Delivered, Accepted, Closed) ORDER BY priority DESC</div>
+        </div>
+    </div>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Logical Operator</th>
+<th style="text-align:center">Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">AND</td>
+<td style="text-align:center">Returns True if both logical statements return True.</td>
+</tr>
+<tr>
+<td style="text-align:center">OR</td>
+<td style="text-align:center">Returns True if either logical statement returns True or both logical statements return True.</td>
+</tr>
+<tr>
+<td style="text-align:center">NOT</td>
+<td style="text-align:center">Returns True if logical statement returns False.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aajql-examples"><!-- raw HTML omitted --><!-- raw HTML omitted -->JQL Examples:</h2>
+<h3 id="aafinding-child-issues-stories-defects-of-an-epic"><!-- raw HTML omitted --><!-- raw HTML omitted -->Finding Child Issues (Stories, Defects) of an Epic:</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">issue in childIssuesOf(&ldquo;MP-6984&rdquo;)</div>
+        </div>
+    </div>
+<h3 id="aasearch-for-issues-without-fix-versions"><!-- raw HTML omitted --><!-- raw HTML omitted -->Search for Issues without Fix Versions:</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">fixVersion = empty</div>
+        </div>
+    </div>
+<h3 id="aasearch-issues-from-a-specific-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted -->Search Issues from a Specific Sprint:</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>sprint in &ldquo;&lt;sprint_name&gt;&rdquo;</p>
+<p>team = 544 and sprint in &ldquo;Roku 22.19&rdquo;</p>
+</div>
+        </div>
+    </div>
+<h3 id="aaaccepted-issues-in-the-past-3-months-with-no-fix-versions"><!-- raw HTML omitted --><!-- raw HTML omitted -->Accepted Issues in the Past 3 months with no Fix Versions</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND fixversion = EMPTY AND createdDate &gt;= startOfMonth(-3) AND status = accepted</div>
+        </div>
+    </div>
+<h3 id="aa-all-issues-in-currently-active-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted --> All Issues in Currently Active Sprint</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND Sprint in openSprints() ORDER BY updated DESC</div>
+        </div>
+    </div>
+<h3 id="aadefects-created-today"><!-- raw HTML omitted --><!-- raw HTML omitted -->Defects Created Today</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND issuetype = defect AND createdDate &gt;= startOfDay()</div>
+        </div>
+    </div>
+<h3 id="aaissues-without-fix-versions-in-current-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted -->Issues without Fix Versions in Current Sprint</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND fixversion = EMPTY AND sprint in openSprints()</div>
+        </div>
+    </div>
+<h3 id="aaaccepted-issues"><!-- raw HTML omitted --><!-- raw HTML omitted -->Accepted Issues</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND status in (Accepted) ORDER BY priority DESC</div>
+        </div>
+    </div>
+<h3 id="aablocked-issues"><!-- raw HTML omitted --><!-- raw HTML omitted -->Blocked Issues</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND status in (Blocked) ORDER BY priority DESC</div>
+        </div>
+    </div>
+<h3 id="aaclosed-issues-past-7-days"><!-- raw HTML omitted --><!-- raw HTML omitted -->Closed Issues (past 7 days)</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND status = closed AND updated &gt;= -7d</div>
+        </div>
+    </div>
+<h3 id="aadefects-in-current-sprint"><!-- raw HTML omitted --><!-- raw HTML omitted -->Defects in Current Sprint</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND issuetype = Defect AND Sprint in openSprints()</div>
+        </div>
+    </div>
+<h3 id="aaepics"><!-- raw HTML omitted --><!-- raw HTML omitted -->Epics</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">issuetype = epic AND team = 544 AND status in (new, &ldquo;In Progress&rdquo;) ORDER BY priority DESC</div>
+        </div>
+    </div>
+<h3 id="aaopen-issues"><!-- raw HTML omitted --><!-- raw HTML omitted -->Open Issues</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>Example:<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">team = 544 AND Sprint in openSprints() AND status not in (Blocked, Delivered, Accepted, Closed) ORDER BY priority DESC</div>
+        </div>
+    </div>
+<h2 id="aasaving-jql-queries-as-jql-filters"><!-- raw HTML omitted --><!-- raw HTML omitted -->Saving JQL Queries as JQL Filters</h2>
+<p>Once you have entered a JQL search string into the appropriate search box, Jira will populate a &ldquo;Save as&rdquo; button next to the Search title above the search box. If you want to save your query as a filter for easy reference later, you can click &ldquo;Save as&rdquo; and then enter the &ldquo;Filter Name&rdquo; in the appropriate field that pops up.</p>
+<p>You can find your saved filters to the right of the search box in a drop down menu under &ldquo;Favorite Filters&rdquo;. These filters can be used to populate dashboards and confluence pages with the returned data.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-30</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/" data-title="JQL Queries and How to Use Them in Jira" data-via="philipjani_" data-hashtags="scrum,jql,jira"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/" data-hashtag="scrum"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Linkedin" data-sharer="linkedin" data-url="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Reddit" data-sharer="reddit" data-url="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Evernote" data-sharer="evernote" data-url="https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/" data-title="JQL Queries and How to Use Them in Jira"><i class="fab fa-evernote fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/scrum/">scrum</a>,&nbsp;<a href="/tags/jql/">jql</a>,&nbsp;<a href="/tags/jira/">jira</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+<div id="comments"><div id="disqus_thread" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://disqus.com/?ref_noscript">Disqus</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://www.linkedin.com/in/philip-jani/" target="_blank">Philip Jani</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://.disqus.com/embed.js" defer></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

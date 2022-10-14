@@ -4,14 +4,14 @@
         <link>https://philipjani.github.io/categories/scrum/</link>
         <description>scrum - Category - philipjani.com</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>philipjani@yahoo.com (Philip Jani)</managingEditor>
-            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Sat, 13 Aug 2022 02:53:33 -0400</lastBuildDate><atom:link href="https://philipjani.github.io/categories/scrum/" rel="self" type="application/rss+xml" /><item>
-    <title>Test</title>
-    <link>https://philipjani.github.io/posts/test/</link>
-    <pubDate>Sat, 13 Aug 2022 02:53:33 -0400</pubDate>
+            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Fri, 30 Sep 2022 09:51:54 -0400</lastBuildDate><atom:link href="https://philipjani.github.io/categories/scrum/" rel="self" type="application/rss+xml" /><item>
+    <title>JQL Queries and How to Use Them in Jira</title>
+    <link>https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/</link>
+    <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
     <author>Philip Jani</author>
-    <guid>https://philipjani.github.io/posts/test/</guid>
-    <description><![CDATA[Option Description data path to data files to supply the data that will be passed into templates. engine engine to be used for processing templates. Handlebars is the default. ext extension to be used for dest files. 3 Content Summaries LoveIt theme uses the summary of the content to display abstract information in the home page. Hugo can generate summaries of your content.
-How to create a script to update an existing Git repository By default, Hugo automatically takes the first 70 words of your content as its summary.]]></description>
+    <guid>https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/</guid>
+    <description><![CDATA[Why Do Scrum Masters Need to Know JQL? Within a real world Jira project, there could easily be thousands, if not tens of thousands of individual issues across hundreds of projects and boards that need to be tracked across a variety of inflight statuses. Jira Queries can also be saved as JQL filters and used to create dashboards that create added transparency for team members, senior leadership or stakeholders.
+In order to make this task of tracking issues easier, Jira has a built in search mechanism called &ldquo;JQL&rdquo; which stands for Jira Query Langauge and in many ways it is similar to SQL (Structured Query Langauge).]]></description>
 </item>
 </channel>
 </rss>
