@@ -4,29 +4,5 @@
         <link>https://philipjani.io/tags/</link>
         <description>Tags - Tag - philipjani.io</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>philipjani@yahoo.com (Philip Jani)</managingEditor>
-            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Fri, 30 Sep 2022 09:51:54 -0400</lastBuildDate><atom:link href="https://philipjani.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>jira</title>
-    <link>https://philipjani.io/tags/jira/</link>
-    <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
-    <author>Philip Jani</author>
-    <guid>https://philipjani.io/tags/jira/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>jql</title>
-    <link>https://philipjani.io/tags/jql/</link>
-    <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
-    <author>Philip Jani</author>
-    <guid>https://philipjani.io/tags/jql/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>scrum</title>
-    <link>https://philipjani.io/tags/scrum/</link>
-    <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
-    <author>Philip Jani</author>
-    <guid>https://philipjani.io/tags/scrum/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><atom:link href="https://philipjani.io/tags/" rel="self" type="application/rss+xml" /></channel>
 </rss>

@@ -2,15 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://philipjani.io/categories/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/tags/jira/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/categories/jira/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/tags/jql/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/categories/jql/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/posts/jql-queries-and-how-to-use-them-in-jira/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/posts/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/tags/scrum/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/categories/scrum/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/tags/</loc><lastmod>2022-09-30T09:51:54-04:00</lastmod></url><url>
-            <loc>https://philipjani.io/about/</loc></url></urlset>
+            <loc>https://philipjani.io/about/</loc></url><url>
+            <loc>https://philipjani.io/categories/</loc></url><url>
+            <loc>https://philipjani.io/</loc></url><url>
+            <loc>https://philipjani.io/tags/</loc></url></urlset>
