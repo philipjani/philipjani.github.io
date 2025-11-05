@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>jira - Tag - philipjani.com</title>
-        <link>https://philipjani.github.io/tags/jira/</link>
-        <description>jira - Tag - philipjani.com</description>
+        <title>jira - Tag - philipjani.io</title>
+        <link>https://philipjani.io/tags/jira/</link>
+        <description>jira - Tag - philipjani.io</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>philipjani@yahoo.com (Philip Jani)</managingEditor>
-            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Fri, 30 Sep 2022 09:51:54 -0400</lastBuildDate><atom:link href="https://philipjani.github.io/tags/jira/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Fri, 30 Sep 2022 09:51:54 -0400</lastBuildDate><atom:link href="https://philipjani.io/tags/jira/" rel="self" type="application/rss+xml" /><item>
     <title>JQL Queries and How to Use Them in Jira</title>
-    <link>https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/</link>
+    <link>https://philipjani.io/posts/jql-queries-and-how-to-use-them-in-jira/</link>
     <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
     <author>Philip Jani</author>
-    <guid>https://philipjani.github.io/posts/jql-queries-and-how-to-use-them-in-jira/</guid>
+    <guid>https://philipjani.io/posts/jql-queries-and-how-to-use-them-in-jira/</guid>
     <description><![CDATA[Why Do Scrum Masters Need to Know JQL? Within a real world Jira project, there could easily be thousands, if not tens of thousands of individual issues across hundreds of projects and boards that need to be tracked across a variety of inflight statuses. Jira Queries can also be saved as JQL filters and used to create dashboards that create added transparency for team members, senior leadership or stakeholders.
 In order to make this task of tracking issues easier, Jira has a built in search mechanism called &ldquo;JQL&rdquo; which stands for Jira Query Langauge and in many ways it is similar to SQL (Structured Query Langauge).]]></description>
 </item>

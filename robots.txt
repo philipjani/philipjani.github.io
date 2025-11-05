@@ -61,4 +61,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: https://philipjani.github.io/sitemap.xml
+Sitemap: https://philipjani.io/sitemap.xml

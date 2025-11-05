@@ -1,31 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - philipjani.com</title>
-        <link>https://philipjani.github.io/categories/</link>
-        <description>Categories - Category - philipjani.com</description>
+        <title>Categories - Category - philipjani.io</title>
+        <link>https://philipjani.io/categories/</link>
+        <description>Categories - Category - philipjani.io</description>
         <generator>Hugo -- gohugo.io</generator><language>en-us</language><managingEditor>philipjani@yahoo.com (Philip Jani)</managingEditor>
-            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Fri, 30 Sep 2022 09:51:54 -0400</lastBuildDate><atom:link href="https://philipjani.github.io/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>philipjani@yahoo.com (Philip Jani)</webMaster><lastBuildDate>Fri, 30 Sep 2022 09:51:54 -0400</lastBuildDate><atom:link href="https://philipjani.io/categories/" rel="self" type="application/rss+xml" /><item>
     <title>jira</title>
-    <link>https://philipjani.github.io/categories/jira/</link>
+    <link>https://philipjani.io/categories/jira/</link>
     <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
     <author>Philip Jani</author>
-    <guid>https://philipjani.github.io/categories/jira/</guid>
+    <guid>https://philipjani.io/categories/jira/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>jql</title>
-    <link>https://philipjani.github.io/categories/jql/</link>
+    <link>https://philipjani.io/categories/jql/</link>
     <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
     <author>Philip Jani</author>
-    <guid>https://philipjani.github.io/categories/jql/</guid>
+    <guid>https://philipjani.io/categories/jql/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>scrum</title>
-    <link>https://philipjani.github.io/categories/scrum/</link>
+    <link>https://philipjani.io/categories/scrum/</link>
     <pubDate>Fri, 30 Sep 2022 09:51:54 -0400</pubDate>
     <author>Philip Jani</author>
-    <guid>https://philipjani.github.io/categories/scrum/</guid>
+    <guid>https://philipjani.io/categories/scrum/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
